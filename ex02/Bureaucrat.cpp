@@ -3,7 +3,7 @@
 #include <iostream>
 
 Bureaucrat::Bureaucrat()
-    : name("Стас (клон)"), grade(150) { }
+    : name("Стас (клон)"), grade(MIN_GRADE) { }
 
 Bureaucrat::Bureaucrat(const Bureaucrat& that)
     : name(that.name), grade(that.grade) { }
@@ -60,9 +60,9 @@ Bureaucrat::GradeTooLowException::GradeTooLowException()
 
 void Bureaucrat::validateGrade() const
 {
-    if (grade < 1)
+    if (grade < MAX_GRADE)
         throw GradeTooHighException();
-    if (grade > 150)
+    if (grade > MIN_GRADE)
         throw GradeTooLowException();
 }
 

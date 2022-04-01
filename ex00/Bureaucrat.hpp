@@ -32,6 +32,9 @@ public:
         GradeTooLowException();
     };
 
+    static const int MAX_GRADE = 1;
+    static const int MIN_GRADE = 150;
+
 private:
     const std::string name;
 

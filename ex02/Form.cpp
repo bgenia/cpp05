@@ -2,8 +2,8 @@
 
 Form::Form()
     : name("Создать Стаса (клона)"),
-      signingGrade(150),
-      executionGrade(150),
+      signingGrade(Bureaucrat::MIN_GRADE),
+      executionGrade(Bureaucrat::MIN_GRADE),
       _signed(false) { }
 
 Form::Form(const Form& that)
@@ -65,9 +65,9 @@ Form::GradeTooLowException::GradeTooLowException()
 
 void Form::validateGrades() const
 {
-    if (signingGrade < 1 || executionGrade < 1)
+    if (signingGrade < Bureaucrat::MAX_GRADE || executionGrade < Bureaucrat::MAX_GRADE)
         throw GradeTooHighException();
-    if (signingGrade > 150 || executionGrade > 150)
+    if (signingGrade > Bureaucrat::MIN_GRADE || executionGrade > Bureaucrat::MIN_GRADE)
         throw GradeTooLowException();
 }
 
