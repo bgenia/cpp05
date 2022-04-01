@@ -150,5 +150,7 @@ int main()
         nikita.signForm(*form);
 
         form->execute(nikita);
+
+        delete form;
     }
 }
