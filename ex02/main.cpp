@@ -86,6 +86,7 @@ int main()
         ShrubberyCreationForm form("куст");
 
         b.signForm(form);
+        form.execute(b);
     }
 
     {
