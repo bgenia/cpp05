@@ -39,10 +39,10 @@ void Bureaucrat::decrementGrade()
 }
 
 Bureaucrat::GradeTooHighException::GradeTooHighException()
-    : std::logic_error("Grade too high") { }
+    : std::logic_error("grade too high") { }
 
 Bureaucrat::GradeTooLowException::GradeTooLowException()
-    : std::logic_error("Grade too low") { }
+    : std::logic_error("grade too low") { }
 
 void Bureaucrat::validateGrade() const
 {
