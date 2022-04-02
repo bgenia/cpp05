@@ -152,5 +152,14 @@ int main()
         form->execute(nikita);
 
         delete form;
+
+        try
+        {
+            form = intern.makeForm("Aboba", "404");
+        }
+        catch (std::exception& e)
+        {
+            std::cout << TERM_F_RED << e.what() << TERM_RESET << std::endl;
+        }
     }
 }

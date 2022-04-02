@@ -58,10 +58,10 @@ bool Form::isSigned() const
 }
 
 Form::GradeTooHighException::GradeTooHighException()
-    : std::logic_error("Grade too high") {}
+    : std::logic_error("grade too high") {}
 
 Form::GradeTooLowException::GradeTooLowException()
-    : std::logic_error("Grade too low") {}
+    : std::logic_error("grade too low") {}
 
 void Form::validateGrades() const
 {
